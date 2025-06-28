@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project MJ Project's | Portfolio Showcase</title>
+    <base target="_self">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@preline/preline@2.0.0/dist/preline.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body class="bg-futuristic-dark text-gray-200 min-h-screen">
+    <!-- Animated Background -->
+    <div id="vanta-bg"></div>
+    
+    <!-- Minimal Navigation -->
+    <nav class="fixed w-full bg-futuristic-dark/80 backdrop-blur-md z-50 border-b border-futuristic-metal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold gradient-text hover:animate-neon-glow transition-all" >MJ Project's</a>
+                </div>
+                <div>
+                    <a href="index.html" class="p-2 rounded-md hover:bg-gray-800 transition-colors" onclick="goHome(event)">
+                        <i class="fas fa-home text-xl text-primary-400"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-16">
+            <h1 class="text-5xl font-bold text-white mb-4">
+                PROJECT <span class="gradient-text">NEXUS</span>
+            </h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+                A curated collection of my digital creations across multiple platforms and mediums
+            </p>
+        </div>
+        
+        <!-- Tabs Navigation -->
+        <div class="flex overflow-x-auto pb-2 mb-12 scrollbar-hide">
+            <div class="flex space-x-1 mx-auto">
+                <button onclick="showTab('designs')" class="px-6 py-3 font-medium rounded-t-lg transition-colors tab-active">
+                    <i class="fas fa-pencil-alt mr-2"></i> Designs
+                </button>
+                <button onclick="showTab('websites')" class="px-6 py-3 font-medium rounded-t-lg transition-colors hover:bg-gray-800">
+                    <i class="fas fa-globe mr-2"></i> Websites
+                </button>
+                <button onclick="showTab('webapps')" class="px-6 py-3 font-medium rounded-t-lg transition-colors hover:bg-gray-800">
+                    <i class="fas fa-window-maximize mr-2"></i> Web Apps
+                </button>
+                <button onclick="showTab('mobile')" class="px-6 py-3 font-medium rounded-t-lg transition-colors hover:bg-gray-800">
+                    <i class="fas fa-mobile-alt mr-2"></i> Mobile Apps
+                </button>
+            </div>
+        </div>
+        
+        <!-- Tab Content -->
+        <div id="tab-content">
+            <!-- Designs Tab -->
+            <div id="designs" class="tab-panel active">
+                <div class="project-grid">
+                    <!-- Design Project 1 -->
+                    <div class="futuristic-card rounded-xl overflow-hidden group">
+                        <div class="relative h-64">
+                            <iframe style="border: none; width: 100%; height: 100%;" 
+                                    src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/file/community" 
+                                    allowfullscreen></iframe>
+                            <div class="absolute top-4 right-4 bg-primary-600 text-white text-xs px-3 py-1 rounded-full glow-effect">
+                                FIGMA
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">Cyber UI Kit</h3>
+                                    <p class="text-gray-300 mt-1">Futuristic design system</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">UI Design</span>
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">Design System</span>
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">Figma</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Design Project 2 -->
+                    <div class="futuristic-card rounded-xl overflow-hidden group">
+                        <div class="relative h-64">
+                            <iframe style="border: none; width: 100%; height: 100%;" 
+                                    src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/file/community" 
+                                    allowfullscreen></iframe>
+                            <div class="absolute top-4 right-4 bg-primary-600 text-white text-xs px-3 py-1 rounded-full glow-effect">
+                                FIGMA
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">Neon Dashboard</h3>
+                                    <p class="text-gray-300 mt-1">Data visualization concept</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">Dashboard</span>
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">Data Viz</span>
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">Dark Theme</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Design Project 3 -->
+                    <div class="futuristic-card rounded-xl overflow-hidden group">
+                        <div class="relative h-64">
+                            <iframe style="border: none; width: 100%; height: 100%;" 
+                                    src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/file/community" 
+                                    allowfullscreen></iframe>
+                            <div class="absolute top-4 right-4 bg-primary-600 text-white text-xs px-3 py-1 rounded-full glow-effect">
+                                FIGMA
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">AR Interface</h3>
+                                    <p class="text-gray-300 mt-1">Mixed reality UI exploration</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">AR/VR</span>
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">3D</span>
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">Prototype</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Websites Tab -->
+            <div id="websites" class="tab-panel hidden">
+                <div class="project-grid">
+                    <!-- Website Project 1 -->
+                    <div class="futuristic-card rounded-xl overflow-hidden group">
+                        <div class="relative h-64">
+                            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" 
+                                 alt="Cyber Tech Website" 
+                                 class="w-full h-full object-cover">
+                            <div class="absolute top-4 right-4 bg-primary-600 text-white text-xs px-3 py-1 rounded-full glow-effect">
+                                LIVE
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">CyberTech Solutions</h3>
+                                    <p class="text-gray-300 mt-1">Corporate website with WebGL effects</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">HTML/CSS</span>
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">Three.js</span>
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">GSAP</span>
+                            </div>
+                            <a href="#" class="inline-block mt-4 text-primary-400 hover:text-primary-300 transition-colors text-sm font-medium">
+                                Visit Site <i class="fas fa-external-link-alt ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Website Project 2 -->
+                    <div class="futuristic-card rounded-xl overflow-hidden group">
+                        <div class="relative h-64">
+                            <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+                                 alt="Neon Portfolio" 
+                                 class="w-full h-full object-cover">
+                            <div class="absolute top-4 right-4 bg-primary-600 text-white text-xs px-3 py-1 rounded-full glow-effect">
+                                LIVE
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">Neon Portfolio</h3>
+                                    <p class="text-gray-300 mt-1">Interactive artist portfolio</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">React</span>
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">Framer Motion</span>
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">Tailwind</span>
+                            </div>
+                            <a href="#" class="inline-block mt-4 text-primary-400 hover:text-primary-300 transition-colors text-sm font-medium">
+                                Visit Site <i class="fas fa-external-link-alt ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Website Project 3 -->
+                    <div class="futuristic-card rounded-xl overflow-hidden group">
+                        <div class="relative h-64">
+                            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                 alt="E-commerce Website" 
+                                 class="w-full h-full object-cover">
+                            <div class="absolute top-4 right-4 bg-primary-600 text-white text-xs px-3 py-1 rounded-full glow-effect">
+                                LIVE
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">Quantum Store</h3>
+                                    <p class="text-gray-300 mt-1">Next-gen e-commerce experience</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">Next.js</span>
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">Stripe</span>
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">Sanity</span>
+                            </div>
+                            <a href="#" class="inline-block mt-4 text-primary-400 hover:text-primary-300 transition-colors text-sm font-medium">
+                                Visit Site <i class="fas fa-external-link-alt ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Web Apps Tab -->
+            <div id="webapps" class="tab-panel hidden">
+                <div class="project-grid">
+                    <!-- Web App 1 -->
+                    <div class="futuristic-card rounded-xl overflow-hidden group">
+                        <div class="relative h-64">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                 alt="Data Dashboard" 
+                                 class="w-full h-full object-cover">
+                            <div class="absolute top-4 right-4 bg-primary-600 text-white text-xs px-3 py-1 rounded-full glow-effect">
+                                DEMO
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">Neural Dashboard</h3>
+                                    <p class="text-gray-300 mt-1">Real-time data visualization</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">Vue.js</span>
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">D3.js</span>
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">WebSockets</span>
+                            </div>
+                            <a href="#" class="inline-block mt-4 text-primary-400 hover:text-primary-300 transition-colors text-sm font-medium">
+                                View Demo <i class="fas fa-external-link-alt ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Web App 2 -->
+                    <div class="futuristic-card rounded-xl overflow-hidden group">
+                        <div class="relative h-64">
+                            <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" 
+                                 alt="AI Chat Interface" 
+                                 class="w-full h-full object-cover">
+                            <div class="absolute top-4 right-4 bg-primary-600 text-white text-xs px-3 py-1 rounded-full glow-effect">
+                                DEMO
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">Quantum Chat</h3>
+                                    <p class="text-gray-300 mt-1">AI-powered conversation interface</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">React</span>
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">Node.js</span>
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">OpenAI</span>
+                            </div>
+                            <a href="#" class="inline-block mt-4 text-primary-400 hover:text-primary-300 transition-colors text-sm font-medium">
+                                View Demo <i class="fas fa-external-link-alt ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Web App 3 -->
+                    <div class="futuristic-card rounded-xl overflow-hidden group">
+                        <div class="relative h-64">
+                            <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1478&q=80" 
+                                 alt="Music Player" 
+                                 class="w-full h-full object-cover">
+                            <div class="absolute top-4 right-4 bg-primary-600 text-white text-xs px-3 py-1 rounded-full glow-effect">
+                                DEMO
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">MJ Project's Player</h3>
+                                    <p class="text-gray-300 mt-1">Immersive audio experience</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">Svelte</span>
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">Web Audio API</span>
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">IndexedDB</span>
+                            </div>
+                            <a href="#" class="inline-block mt-4 text-primary-400 hover:text-primary-300 transition-colors text-sm font-medium">
+                                View Demo <i class="fas fa-external-link-alt ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Apps Tab -->
+            <div id="mobile" class="tab-panel hidden">
+                <div class="project-grid">
+                    <!-- Mobile App 1 -->
+                    <div class="futuristic-card rounded-xl overflow-hidden group">
+                        <div class="relative h-64">
+                            <img src="https://images.unsplash.com/photo-1512941937669-90cbf3ba8d7b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                 alt="Fitness App" 
+                                 class="w-full h-full object-cover">
+                            <div class="absolute top-4 right-4 bg-primary-600 text-white text-xs px-3 py-1 rounded-full glow-effect">
+                                PLAY STORE
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">CyberFit</h3>
+                                    <p class="text-gray-300 mt-1">AR fitness companion</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">Flutter</span>
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">ARKit</span>
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">Firebase</span>
+                            </div>
+                            <a href="#" class="inline-block mt-4 text-primary-400 hover:text-primary-300 transition-colors text-sm font-medium">
+                                View on Play Store <i class="fas fa-external-link-alt ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile App 2 -->
+                    <div class="futuristic-card rounded-xl overflow-hidden group">
+                        <div class="relative h-64">
+                            <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                 alt="Finance App" 
+                                 class="w-full h-full object-cover">
+                            <div class="absolute top-4 right-4 bg-primary-600 text-white text-xs px-3 py-1 rounded-full glow-effect">
+                                APP STORE
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">Quantum Wallet</h3>
+                                    <p class="text-gray-300 mt-1">Crypto finance manager</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">Flutter</span>
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">Blockchain</span>
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">Biometrics</span>
+                            </div>
+                            <a href="#" class="inline-block mt-4 text-primary-400 hover:text-primary-300 transition-colors text-sm font-medium">
+                                View on App Store <i class="fas fa-external-link-alt ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile App 3 -->
+                    <div class="futuristic-card rounded-xl overflow-hidden group">
+                        <div class="relative h-64">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                 alt="Social App" 
+                                 class="w-full h-full object-cover">
+                            <div class="absolute top-4 right-4 bg-primary-600 text-white text-xs px-3 py-1 rounded-full glow-effect">
+                                BOTH STORES
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">MJ Project's Connect</h3>
+                                    <p class="text-gray-300 mt-1">Next-gen social platform</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">Flutter</span>
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">Firebase</span>
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">WebRTC</span>
+                            </div>
+                            <a href="#" class="inline-block mt-4 text-primary-400 hover:text-primary-300 transition-colors text-sm font-medium">
+                                View on Stores <i class="fas fa-external-link-alt ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Initialize Vanta.js animated background
+        VANTA.NET({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0xff5e00,
+            backgroundColor: 0x101010,
+            points: 12.00,
+            maxDistance: 22.00,
+            spacing: 18.00
+        });
+        
+        // Tab functionality
+        function showTab(tabId) {
+            // Hide all tab panels
+            document.querySelectorAll('.tab-panel').forEach(panel => {
+                panel.classList.add('hidden');
+                panel.classList.remove('active');
+            });
+            
+            // Show selected tab panel
+            document.getElementById(tabId).classList.remove('hidden');
+            document.getElementById(tabId).classList.add('active');
+            
+            // Update tab buttons
+            document.querySelectorAll('#tab-content + div button').forEach(btn => {
+                btn.classList.remove('tab-active', 'bg-gray-800');
+                btn.classList.add('hover:bg-gray-800');
+            });
+            
+            // Highlight active tab button
+            const activeBtn = Array.from(document.querySelectorAll('#tab-content + div button')).find(btn => 
+                btn.getAttribute('onclick').includes(tabId)
+            );
+            if (activeBtn) {
+                activeBtn.classList.add('tab-active');
+                activeBtn.classList.remove('hover:bg-gray-800');
+            }
+        }
+        
+        // Navigation to home
+        function goHome(event) {
+            event.preventDefault();
+            // In a real implementation, this would navigate back to your main portfolio page
+            window.location.href = 'index.html'; // Adjust this to your actual home page URL
+        }
+        
+        // Initialize - show designs tab by default
+        document.addEventListener('DOMContentLoaded', function() {
+            showTab('designs');
+        });
+    </script>
+</body>
+</html>

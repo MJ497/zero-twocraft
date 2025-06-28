@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MJ | Frontend Dev Portfolio</title>
+    <base target="_self">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@preline/preline@2.0.0/dist/preline.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <script src="script.js" defer> </script>
+   
+</head>
+<body class="bg-futuristic-dark text-gray-200 min-h-screen">
+    <!-- Animated Background -->
+    <div id="vanta-bg"></div>
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-futuristic-dark/80 backdrop-blur-md z-50 border-b border-futuristic-metal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center">
+                  <a href="#" class="flex items-center text-2xl font-bold text-white hover:animate-neon-glow transition-all">
+  <img src="logo.png" alt="Logo" class="h-10 w-auto mr-2" />
+  <span class="hidden sm:inline">CRAFT</span>
+</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="px-3 py-2 rounded-md text-sm font-medium hover:text-primary-400 hover:animate-pulse transition-all">Home</a>
+                        <a href="#about" class="px-3 py-2 rounded-md text-sm font-medium hover:text-primary-400 hover:animate-pulse transition-all" >About</a>
+                        <a href="#skills" class="px-3 py-2 rounded-md text-sm font-medium hover:text-primary-400 hover:animate-pulse transition-all">Skills</a>
+                        <a href="#projects" class="px-3 py-2 rounded-md text-sm font-medium hover:text-primary-400 hover:animate-pulse transition-all" >Projects</a>
+                        <a href="contact" class="px-3 py-2 rounded-md text-sm font-medium hover:text-primary-400 hover:animate-pulse transition-all" >Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none" onclick="toggleMobileMenu()">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium hover:text-primary-400 transition-all" >Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:text-primary-400 transition-all" >About</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium hover:text-primary-400 transition-all" >Skills</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium hover:text-primary-400 transition-all" >Projects</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium hover:text-primary-400 transition-all" >Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Home Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center z-10">
+                <div class="space-y-8">
+                    <h1 class="text-5xl md:text-6xl font-bold text-white">
+                        <span class="gradient-text animate-neon-glow">WELCOME  TO,</span><br>
+                        <span class="gradient-text">ZERO-TWO CRAFT</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-gray-300">
+                        <span class="inline-block mr-2">🚀</span> Where Creativity Meets Technology
+                    </h2>
+                    <p class="text-lg text-gray-400 max-w-lg">
+                        Crafting immersive digital experiences at the intersection of design and technology. 
+                        Specializing in cutting-edge web, mobile, and interactive solutions.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="project.html" class="px-8 py-4 gradient-bg hover:bg-gradient-to-r from-orange-600 to-red-600 rounded-lg font-bold text-white glow-effect transition-all flex items-center" >
+                            <span>VIEW WORK</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#contact" class="px-8 py-4 border-2 border-primary-500 text-primary-400 hover:bg-primary-900/30 rounded-lg font-bold transition-all flex items-center" >
+                            <span>CONTACT</span>
+                            <i class="fas fa-paper-plane ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative hidden md:block">
+                    <div class="w-full h-96 rounded-2xl floating relative overflow-hidden neon-border">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <!-- 3D Icon Scene -->
+                            <div class="icon-3d">
+                                <i class="fas fa-cube text-8xl gradient-text"></i>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4">
+                            <div class="flex space-x-2">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24 bg-futuristic-dark/70 backdrop-blur-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-white">
+                        <span class="gradient-text">ABOUT</span> US
+                    </h2>
+                    <div class="w-32 h-1 gradient-bg mx-auto mt-6 rounded-full"></div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-8">
+                        <h3 class="text-3xl font-semibold text-white">
+                            Who <span class="gradient-text">We Are</span>
+                        </h3>
+                        <p class="text-gray-400 text-lg leading-relaxed">
+                            We are visionary developers and designers pushing the boundaries of digital experiences. 
+                            With expertise in futuristic interfaces, immersive technologies, and cutting-edge frameworks, 
+                            we create solutions that feel like they're from the future.
+                        </p>
+                        <p class="text-gray-400 text-lg leading-relaxed">
+                            Our approach combines technical mastery with artistic vision to build products that are 
+                            not just functional but transformative. We thrive at the intersection of innovation and usability.
+                        </p>
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="futuristic-card p-6 rounded-xl">
+                                <div class="flex items-center space-x-4">
+                                    <div class="icon-3d text-3xl gradient-text">
+                                        <i class="fas fa-calendar-alt"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xl font-bold text-white">3+ Years</h4>
+                                        <p class="text-gray-400">Experience</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="futuristic-card p-6 rounded-xl">
+                                <div class="flex items-center space-x-4">
+                                    <div class="icon-3d text-3xl gradient-text">
+                                        <i class="fas fa-project-diagram"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xl font-bold text-white">20+</h4>
+                                        <p class="text-gray-400">Projects</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="futuristic-card rounded-2xl overflow-hidden neon-border">
+                            <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                 alt="Frontend Developer" 
+                                 class="w-full h-auto rounded-xl">
+                            <div class="absolute bottom-4 right-4 bg-primary-600 text-white text-xs px-3 py-1 rounded-full glow-effect">
+                                FUTURE READY
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-24 bg-futuristic-dark/50 backdrop-blur-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-white">
+                        MY <span class="gradient-text">SKILLS</span>
+                    </h2>
+                    <div class="w-32 h-1 gradient-bg mx-auto mt-6 rounded-full"></div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-16">
+                    <div>
+                        <h3 class="text-3xl font-semibold text-white mb-8">
+                            Technical <span class="gradient-text">Expertise</span>
+                        </h3>
+                        <div class="space-y-8">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300 font-medium">Web Development</span>
+                                    <span class="gradient-text font-bold">95%</span>
+                                </div>
+                                <div class="w-full bg-gray-800 rounded-full h-2">
+                                    <div class="skill-bar rounded-full h-2" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300 font-medium">Flutter</span>
+                                    <span class="gradient-text font-bold">90%</span>
+                                </div>
+                                <div class="w-full bg-gray-800 rounded-full h-2">
+                                    <div class="skill-bar rounded-full h-2" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300 font-medium">UI/UX Design</span>
+                                    <span class="gradient-text font-bold">92%</span>
+                                </div>
+                                <div class="w-full bg-gray-800 rounded-full h-2">
+                                    <div class="skill-bar rounded-full h-2" style="width: 92%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300 font-medium">3D Design</span>
+                                    <span class="gradient-text font-bold">85%</span>
+                                </div>
+                                <div class="w-full bg-gray-800 rounded-full h-2">
+                                    <div class="skill-bar rounded-full h-2" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-semibold text-white mb-8">
+                            Creative <span class="gradient-text">Approach</span>
+                        </h3>
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="futuristic-card p-6 rounded-xl">
+                                <div class="icon-3d text-4xl gradient-text mb-4">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-white mb-2">Innovation</h4>
+                                <p class="text-gray-400">Pushing boundaries with cutting-edge solutions</p>
+                            </div>
+                            <div class="futuristic-card p-6 rounded-xl">
+                                <div class="icon-3d text-4xl gradient-text mb-4">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-white mb-2">Vision</h4>
+                                <p class="text-gray-400">Seeing beyond current technological limits</p>
+                            </div>
+                            <div class="futuristic-card p-6 rounded-xl">
+                                <div class="icon-3d text-4xl gradient-text mb-4">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-white mb-2">Execution</h4>
+                                <p class="text-gray-400">Turning ideas into functional reality</p>
+                            </div>
+                            <div class="futuristic-card p-6 rounded-xl">
+                                <div class="icon-3d text-4xl gradient-text mb-4">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-white mb-2">Strategy</h4>
+                                <p class="text-gray-400">Future-proof architectural planning</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-24 bg-futuristic-dark/70 backdrop-blur-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-white">
+                        Our <span class="gradient-text">PROJECTS</span>
+                    </h2>
+                    <div class="w-32 h-1 gradient-bg mx-auto mt-6 rounded-full"></div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="futuristic-card rounded-xl overflow-hidden group">
+                        <div class="relative h-64">
+                            <iframe style="border: none; width: 100%; height: 100%;" 
+                                    src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/file/community" 
+                                    allowfullscreen></iframe>
+                            <div class="absolute top-4 right-4 bg-primary-600 text-white text-xs px-3 py-1 rounded-full glow-effect">
+                                FIGMA
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">Neon Commerce</h3>
+                                    <p class="text-gray-300 mt-1">Futuristic e-commerce experience</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">Flutter</span>
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">3D</span>
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">AR</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="futuristic-card rounded-xl overflow-hidden group">
+                        <div class="relative h-64">
+                            <iframe style="border: none; width: 100%; height: 100%;" 
+                                    src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/file/community" 
+                                    allowfullscreen></iframe>
+                            <div class="absolute top-4 right-4 bg-primary-600 text-white text-xs px-3 py-1 rounded-full glow-effect">
+                                FIGMA
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">Cyber Dashboard</h3>
+                                    <p class="text-gray-300 mt-1">Data visualization reimagined</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">WebGL</span>
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">Three.js</span>
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">AI</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="futuristic-card rounded-xl overflow-hidden group">
+                        <div class="relative h-64">
+                            <iframe style="border: none; width: 100%; height: 100%;" 
+                                    src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/file/community" 
+                                    allowfullscreen></iframe>
+                            <div class="absolute top-4 right-4 bg-primary-600 text-white text-xs px-3 py-1 rounded-full glow-effect">
+                                FIGMA
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">AR Portfolio</h3>
+                                    <p class="text-gray-300 mt-1">Immersive resume experience</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">ARKit</span>
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">Unity</span>
+                                <span class="bg-gray-800 text-primary-400 text-xs px-3 py-1 rounded-full">3D</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-16">
+                    <a href="project.html" class="inline-flex items-center px-8 py-4 border-2 border-primary-500 text-primary-400 hover:bg-primary-900/30 rounded-lg font-bold transition-all group">
+                        <span>EXPLORE MORE</span>
+                        <i class="fas fa-arrow-right ml-3 group-hover:translate-x-2 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 bg-futuristic-dark/50 backdrop-blur-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-white">
+                        GET IN <span class="gradient-text">TOUCH</span>
+                    </h2>
+                    <div class="w-32 h-1 gradient-bg mx-auto mt-6 rounded-full"></div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-16">
+                    <div class="space-y-8">
+                        <h3 class="text-3xl font-semibold text-white">
+                            Contact <span class="gradient-text">Information</span>
+                        </h3>
+                        <p class="text-gray-400 text-lg">
+                            Ready to create something extraordinary? Reach out and let's build the future together.
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <div class="futuristic-card p-6 rounded-xl">
+                                <div class="flex items-center space-x-6">
+                                    <div class="icon-3d text-3xl gradient-text">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xl font-bold text-white">Email</h4>
+                                        <a href="mailto:future@MJ.dev" class="text-gray-400 hover:text-primary-400 transition-colors">future@MJ.dev</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="futuristic-card p-6 rounded-xl">
+                                <div class="flex items-center space-x-6">
+                                    <div class="icon-3d text-3xl gradient-text">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xl font-bold text-white">Holo-Comm</h4>
+                                        <a href="tel:+1234567890" class="text-gray-400 hover:text-primary-400 transition-colors">+1 (234) 567-890</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="futuristic-card p-6 rounded-xl">
+                                <div class="flex items-center space-x-6">
+                                    <div class="icon-3d text-3xl gradient-text">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xl font-bold text-white">Neural Hub</h4>
+                                        <p class="text-gray-400">Silicon Valley, CA</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="pt-4">
+                            <h4 class="text-xl font-bold text-white mb-4">Quantum Network</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary-600 transition-colors icon-3d">
+                                    <i class="fab fa-github text-xl text-white"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary-600 transition-colors icon-3d">
+                                    <i class="fab fa-linkedin-in text-xl text-white"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary-600 transition-colors icon-3d">
+                                    <i class="fab fa-dribbble text-xl text-white"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary-600 transition-colors icon-3d">
+                                    <i class="fab fa-figma text-xl text-white"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="futuristic-card p-8 rounded-xl neon-border">
+                        <form class="space-y-6">
+                            <div class="grid grid-cols-1 gap-6">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
+                                    <input type="text" id="name" class="w-full px-5 py-4 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors" placeholder="Enter your name">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Your Email</label>
+                                    <input type="email" id="email" class="w-full px-5 py-4 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors" placeholder="Enter your email">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="subject" class="block text-sm font-medium text-gray-300 mb-2">Subject</label>
+                                <input type="text" id="subject" class="w-full px-5 py-4 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors" placeholder="Project Inquiry">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+                                <textarea id="message" rows="5" class="w-full px-5 py-4 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors" placeholder="Your message here..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full px-8 py-4 gradient-bg  rounded-lg font-bold text-white glow-effect transition-all flex items-center justify-center">
+                                <span>SEND QUANTUM MESSAGE</span>
+                                <i class="fas fa-paper-plane ml-3"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-futuristic-dark border-t border-gray-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-6 md:mb-0">
+                    <p class="text-gray-400">&copy; 2023 <span class="gradient-text font-bold">MJ</span>. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
