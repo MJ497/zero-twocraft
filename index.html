@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MJ | Frontend Dev Portfolio</title>
+    <title>Zero-Two Craft</title>
     <base target="_self">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/@preline/preline@2.0.0/dist/preline.min.js"></script>
@@ -11,7 +11,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
     <link rel="stylesheet" href="main.css">
+    <!-- Add this before your script.js (or above your inline script) -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+
     <script src="script.js" defer> </script>
+    <link rel="shortcut icon" href="new.png" type="image/x-icon">
    
 </head>
 <body class="bg-futuristic-dark text-gray-200 min-h-screen">
@@ -24,7 +28,7 @@
             <div class="flex items-center justify-between h-20">
                 <div class="flex items-center">
                   <a href="#" class="flex items-center text-2xl font-bold text-white hover:animate-neon-glow transition-all">
-  <img src="logo.png" alt="Logo" class="h-10 w-auto mr-2" />
+  <img src="new.png" alt="Logo" class="h-10 w-auto " />
   <span class="hidden sm:inline">CRAFT</span>
 </a>
                 </div>
@@ -379,22 +383,29 @@
                                     <div class="icon-3d text-3xl gradient-text">
                                         <i class="fas fa-envelope"></i>
                                     </div>
-                                    <div>
-                                        <h4 class="text-xl font-bold text-white">Email</h4>
-                                        <a href="mailto:future@MJ.dev" class="text-gray-400 hover:text-primary-400 transition-colors">future@MJ.dev</a>
-                                    </div>
+                                   <div>
+    <h4 class="text-xl font-bold text-white">Email</h4>
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=zerotwo02craft@gmail.com" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="text-gray-400 hover:text-primary-400 transition-colors">
+        zerotwo02craft@gmail.com
+    </a>
+</div>
                                 </div>
                             </div>
                             
                             <div class="futuristic-card p-6 rounded-xl">
                                 <div class="flex items-center space-x-6">
                                     <div class="icon-3d text-3xl gradient-text">
-                                        <i class="fas fa-phone-alt"></i>
+                                       <i class="fab fa-whatsapp"></i>
                                     </div>
                                     <div>
-                                        <h4 class="text-xl font-bold text-white">Holo-Comm</h4>
-                                        <a href="tel:+1234567890" class="text-gray-400 hover:text-primary-400 transition-colors">+1 (234) 567-890</a>
-                                    </div>
+                                        <h4 class="text-xl font-bold text-white">WhatsApp Connect</h4>
+                                      <a href="https://wa.me/08126509946" target="_blank" rel="noopener" class="text-gray-400 hover:text-primary-400 transition-colors">
+  +2348126509946
+</a>
+   </div>
                                 </div>
                             </div>
                             
@@ -404,8 +415,8 @@
                                         <i class="fas fa-map-marker-alt"></i>
                                     </div>
                                     <div>
-                                        <h4 class="text-xl font-bold text-white">Neural Hub</h4>
-                                        <p class="text-gray-400">Silicon Valley, CA</p>
+                                        <h4 class="text-xl font-bold text-white">Local Base</h4>
+                                        <p class="text-gray-400">Cross River State Calabar NG</p>
                                     </div>
                                 </div>
                             </div>
@@ -431,27 +442,27 @@
                     </div>
                     
                     <div class="futuristic-card p-8 rounded-xl neon-border">
-                        <form class="space-y-6">
+                        <form id="contact-form" class="space-y-6">
                             <div class="grid grid-cols-1 gap-6">
                                 <div>
                                     <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
-                                    <input type="text" id="name" class="w-full px-5 py-4 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors" placeholder="Enter your name">
+                                    <input type="text" id="name" name="name" class="w-full px-5 py-4 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors" placeholder="Enter your name">
                                 </div>
                                 <div>
                                     <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Your Email</label>
-                                    <input type="email" id="email" class="w-full px-5 py-4 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors" placeholder="Enter your email">
+                                    <input type="email" id="email" name="email" class="w-full px-5 py-4 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors" placeholder="Enter your email">
                                 </div>
                             </div>
                             <div>
                                 <label for="subject" class="block text-sm font-medium text-gray-300 mb-2">Subject</label>
-                                <input type="text" id="subject" class="w-full px-5 py-4 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors" placeholder="Project Inquiry">
+                                <input type="text" id="subject" name="subject" class="w-full px-5 py-4 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors" placeholder="Project Inquiry">
                             </div>
                             <div>
                                 <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
-                                <textarea id="message" rows="5" class="w-full px-5 py-4 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors" placeholder="Your message here..."></textarea>
+                                <textarea id="message" name="message" rows="5" class="w-full px-5 py-4 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors" placeholder="Your message here..."></textarea>
                             </div>
                             <button type="submit" class="w-full px-8 py-4 gradient-bg  rounded-lg font-bold text-white glow-effect transition-all flex items-center justify-center">
-                                <span>SEND QUANTUM MESSAGE</span>
+                                <span>SEND  MESSAGE</span>
                                 <i class="fas fa-paper-plane ml-3"></i>
                             </button>
                         </form>
@@ -466,7 +477,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="text-center md:text-left mb-6 md:mb-0">
-                    <p class="text-gray-400">&copy; 2023 <span class="gradient-text font-bold">MJ</span>. All rights reserved.</p>
+                    <p class="text-gray-400">&copy; 2025 <span class="gradient-text font-bold">MJ</span>. All rights reserved.</p>
                 </div>
                 <div class="flex space-x-6">
                     <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">Privacy Policy</a>
@@ -476,7 +487,65 @@
             </div>
         </div>
     </footer>
+    <!-- Loading Modal -->
+<div id="loading-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+  <div class="bg-gray-800 p-8 rounded-xl flex flex-col items-center">
+    <div class="animate-spin border-4 border-t-transparent border-primary-500 rounded-full w-12 h-12 mb-4"></div>
+    <p class="text-white">Sending… please wait</p>
+  </div>
+</div>
 
+<!-- Success Modal -->
+<div id="success-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+  <div class="bg-gray-800 p-8 rounded-xl text-center">
+    <i class="fas fa-check-circle text-4xl text-green-400 mb-4"></i>
+    <h3 class="text-white text-2xl mb-2">Message Sent!</h3>
+    <p class="text-gray-300 mb-4">Thank you for getting in touch. I’ll be back to you soon.</p>
+    <button id="success-close" class="px-6 py-2 bg-primary-500 rounded-lg text-white hover:bg-primary-600 transition">
+      Close
+    </button>
+  </div>
+</div>
+
+<script>
+           //email js
+(function(){
+  emailjs.init("OVe_xXvQFu7Rl_q5Q"); // your public key
+})();
+
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contact-form');
+  const loading = document.getElementById('loading-modal');
+  const success = document.getElementById('success-modal');
+  const closeBtn = document.getElementById('success-close');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // 1) show loading  
+    loading.classList.remove('hidden');
+
+    emailjs.sendForm("service_b6zbahp", "template_cgydb0j", this)
+      .then(() => {
+        // 2) hide loading, show success
+        loading.classList.add('hidden');
+        success.classList.remove('hidden');
+        form.reset();
+      })
+      .catch(err => {
+        loading.classList.add('hidden');
+        alert('Failed to send message. Please try again.');
+        console.error('EmailJS error:', err);
+      });
+  });
+
+  // close the success modal when button clicked
+  closeBtn.addEventListener('click', () => {
+    success.classList.add('hidden');
+  });
+});
+
+</script>
     
 </body>
 </html>
